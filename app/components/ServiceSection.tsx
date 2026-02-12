@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 const services = [
   { icon: "🔨", title: "부분 철거", desc: "필요한 부분만 선별 철거하여 비용과 시간을 최소화합니다." },
   { icon: "🏗️", title: "기존 구조 활용 설계", desc: "남길 수 있는 구조는 최대한 살려 합리적으로 설계합니다." },
@@ -6,27 +10,50 @@ const services = [
   { icon: "⏱️", title: "최소 공사 기간", desc: "체계적인 공정 관리로 영업 공백을 최소화합니다." },
 ];
 
+const container = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.1, delayChildren: 0.15 } },
+};
+
+const item = {
+  hidden: { opacity: 0, y: 28 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" as const } },
+};
+
 export default function ServiceSection() {
   return (
     <section id="services" className="py-20 md:py-32 px-5 bg-main">
       <div className="max-w-[1920px] mx-auto">
-        <div className="text-center mb-24">
+        <motion.div
+          className="text-center mb-24"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.5, ease: "easeOut" as const }}
+        >
           <p className="text-xs font-semibold tracking-widest uppercase mb-3 text-warm-gray">Skill Point</p>
           <h2 className="text-3xl md:text-4xl font-bold mb-3 text-accent">우리가 하는 일</h2>
           <p className="text-fg-secondary">기존 매장 구조를 최대한 살리는 스마트한 인테리어</p>
-        </div>
-        <div className="max-w-[1080px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        </motion.div>
+        <motion.div
+          className="max-w-[1080px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-80px" }}
+          variants={container}
+        >
           {services.map((s, i) => (
-            <div
+            <motion.div
               key={i}
+              variants={item}
               className="rounded-[16px] p-8 py-10 bg-warm-white shadow-md transition hover:shadow-lg hover:-translate-y-1"
             >
               <span className="text-3xl block mb-5">{s.icon}</span>
               <h3 className="text-lg font-bold mb-2 text-accent">{s.title}</h3>
               <p className="text-sm leading-relaxed text-fg-secondary">{s.desc}</p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

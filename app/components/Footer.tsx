@@ -1,6 +1,16 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 export default function Footer() {
   return (
-    <footer className="py-12 px-5 bg-accent border-t border-white/10">
+    <motion.footer
+      className="py-12 px-5 bg-accent border-t border-white/10"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.4 }}
+    >
       <div className="max-w-[1920px] mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-center md:text-left">
@@ -16,6 +26,6 @@ export default function Footer() {
           &copy; 2026 PINPOINT. All rights reserved.
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 }
