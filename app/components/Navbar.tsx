@@ -22,13 +22,15 @@ export default function Navbar() {
         <a href="#" className="text-xl font-bold tracking-tight text-accent w-[120px]">
           <Image src="/images/logo.svg" alt="PINPOINT" width={150} height={50} className="w-full h-auto" />
         </a>
-        <div className="hidden md:flex items-center gap-8 text-base text-fg-secondary">
-          <a href="#worries" className="hover:opacity-70 transition">고민</a>
-          <a href="#services" className="hover:opacity-70 transition">서비스</a>
-          <a href="#portfolio" className="hover:opacity-70 transition">시공사례</a>
-          <a href="#process" className="hover:opacity-70 transition">프로세스</a>
+        <div className="hidden md:flex items-center gap-6 text-sm text-fg-secondary">
+          <a href="#categories" className="hover:opacity-70 transition">카테고리</a>
+          <a href="#company" className="hover:opacity-70 transition">업체소개</a>
+          <a href="#faq" className="hover:opacity-70 transition">자주묻는질문</a>
+          <a href="#portfolio" className="hover:opacity-70 transition">시공 사례</a>
+          <a href="#notice" className="hover:opacity-70 transition">공지사항</a>
+          <a href="#partner" className="hover:opacity-70 transition">파트너 모집</a>
           <a href="#contact" className="px-5 py-2 rounded-[16px] text-white bg-accent transition hover:opacity-90">
-            무료 상담
+            문의 남기기
           </a>
         </div>
         <a href="#contact" className="md:hidden px-4 py-2 rounded-[16px] text-sm font-medium text-white bg-accent">

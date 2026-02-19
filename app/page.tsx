@@ -1,10 +1,11 @@
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
-import PainPointSection from "./components/PainPointSection";
 import ServiceSection from "./components/ServiceSection";
+import CompanyIntroSection from "./components/CompanyIntroSection";
+import PainPointSection from "./components/PainPointSection";
 import PortfolioSection from "./components/PortfolioSection";
-import ProcessSection from "./components/ProcessSection";
-import TrustSection from "./components/TrustSection";
+import NoticeSection from "./components/NoticeSection";
+import PartnerSection from "./components/PartnerSection";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
 
@@ -13,11 +14,12 @@ export default function Home() {
     <main className="w-full overflow-x-hidden text-fg">
       <Navbar />
       <HeroSection />
-      <PainPointSection />
+      <CompanyIntroSection />
       <ServiceSection />
+      <PainPointSection />
       <PortfolioSection />
-      <ProcessSection />
-      <TrustSection />
+      <NoticeSection />
+      <PartnerSection />
       <ContactSection />
       <Footer />
     </main>

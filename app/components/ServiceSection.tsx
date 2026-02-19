@@ -3,11 +3,12 @@
 import { motion } from "framer-motion";
 
 const services = [
-  { icon: "🔨", title: "부분 철거", desc: "필요한 부분만 선별 철거하여 비용과 시간을 최소화합니다." },
-  { icon: "🏗️", title: "기존 구조 활용 설계", desc: "남길 수 있는 구조는 최대한 살려 합리적으로 설계합니다." },
-  { icon: "🏠", title: "업종 맞춤 동선 재설계", desc: "새로운 업종에 최적화된 고객·작업 동선을 설계합니다." },
-  { icon: "🪧", title: "간판·외관 리뉴얼", desc: "업종에 맞는 새로운 외관과 간판으로 첫인상을 바꿉니다." },
-  { icon: "⏱️", title: "최소 공사 기간", desc: "체계적인 공정 관리로 영업 공백을 최소화합니다." },
+  { icon: "🍳", title: "업종변경", desc: "주방 변경, 홀 동선 재배치, 홀 분위기 전환, 간판 교체 등" },
+  { icon: "🧱", title: "부분공사", desc: "바닥, 벽면, 천정, 조명 등 필요한 구간만 선택 시공" },
+  { icon: "🛠️", title: "전문공사", desc: "냉·난방, 누수·방수, 닥트, 전기 증설 등 전문 파트 공사" },
+  { icon: "⚡", title: "긴급간편공사", desc: "작지만 꼭 필요한 소액 간편 공사, 빠른 방문·빠른 처리" },
+  { icon: "🏬", title: "전면공사", desc: "브랜딩부터 공간 전환까지 전체 리뉴얼 패키지 진행" },
+  { icon: "📌", title: "기타", desc: "현장 조건별 맞춤 제안. 방문 실측 후 최적안 안내" },
 ];
 
 const container = {
@@ -22,7 +23,7 @@ const item = {
 
 export default function ServiceSection() {
   return (
-    <section id="services" className="py-20 md:py-32 px-5 bg-main">
+    <section id="categories" className="py-20 md:py-32 px-5 bg-main">
       <div className="max-w-[1920px] mx-auto">
         <motion.div
           className="text-center mb-24"
@@ -31,9 +32,9 @@ export default function ServiceSection() {
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.5, ease: "easeOut" as const }}
         >
-          <p className="text-xs font-semibold tracking-widest uppercase mb-3 text-warm-gray">Skill Point</p>
-          <h2 className="text-3xl md:text-4xl font-bold mb-3 text-accent">우리가 하는 일</h2>
-          <p className="text-fg-secondary">기존 매장 구조를 최대한 살리는 스마트한 인테리어</p>
+          <p className="text-xs font-semibold tracking-widest uppercase mb-3 text-warm-gray">Category</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-3 text-accent">공사 카테고리</h2>
+          <p className="text-fg-secondary">업종변경 / 부분공사 / 전문공사 / 긴급간편공사 / 전면공사 / 기타</p>
         </motion.div>
         <motion.div
           className="max-w-[1080px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"

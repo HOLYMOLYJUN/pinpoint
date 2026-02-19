@@ -22,9 +22,9 @@ export default function PortfolioSection() {
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.5, ease: "easeOut" as const }}
         >
-          <p className="text-xs font-semibold tracking-widest uppercase mb-3 text-warm-gray">Turning Point</p>
-          <h2 className="text-3xl md:text-4xl font-bold mb-3 text-accent">Before &amp; After</h2>
-          <p className="text-fg-secondary">같은 공간, 완전히 다른 분위기</p>
+          <p className="text-xs font-semibold tracking-widest uppercase mb-3 text-warm-gray">Portfolio</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-3 text-accent">시공 사례</h2>
+          <p className="text-fg-secondary">기존 구조를 살리면서도 확실한 변화</p>
         </motion.div>
         <motion.div
           className="flex flex-wrap justify-center gap-3 mb-12"

@@ -43,28 +43,25 @@ export default function HeroSection() {
           variants={item}
           className="inline-block text-xs font-medium px-3.5 py-1 rounded-full mb-8 bg-accent/10 text-accent"
         >
-          업종 변경 인테리어 전문
+          상업공간 부분 리모델링 전문기업
         </motion.span>
         <motion.h1
           variants={item}
           className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight mb-8 text-accent"
         >
-          업종 변경 인테리어,
+          필요한 곳만 콕 집어 완성하는
           <br />
-          <span className="text-accent-light">전면 철거 없이</span> 가능합니다
+          핀셋 리뉴얼 솔루션
         </motion.h1>
         <motion.p variants={item} className="text-sm md:text-base mb-12 leading-relaxed text-accent-light">
-          기존 구조를 최대한 활용하여{" "}
-          <strong className="text-accent">최소 비용, 최소 기간</strong>으로
-          <br className="hidden md:block" />
-          새로운 매장을 완성합니다.
+          다 뜯어내지 않고, 필요한 곳만 정확히 리뉴얼합니다.
         </motion.p>
         <motion.div variants={item} className="flex flex-col sm:flex-row gap-3 justify-center">
           <a href="#contact" className="px-6 py-3 rounded-[16px] text-base font-semibold text-white bg-accent transition hover:opacity-90 hover:shadow-lg">
-            무료 상담 신청하기
+            문의 남기기
           </a>
-          <a href="#portfolio" className="px-6 py-3 rounded-[16px] text-base font-semibold border-2 border-accent/20 text-accent transition hover:border-accent/40">
-            시공 사례 보기
+          <a href="#categories" className="px-6 py-3 rounded-[16px] text-base font-semibold border-2 border-accent/20 text-accent transition hover:border-accent/40">
+            카테고리 보기
           </a>
         </motion.div>
         <motion.div variants={item} className="mt-12 flex flex-wrap justify-center gap-5 text-xs md:text-sm text-accent font-medium">
