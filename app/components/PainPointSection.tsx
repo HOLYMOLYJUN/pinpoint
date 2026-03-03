@@ -6,7 +6,7 @@ const conversation = [
   { side: "left" as const, text: "업종 바꾸고 싶은데, \n 전면 철거하면 비용이 너무 부담돼요..." },
   { side: "right" as const, text: "필요한 부분만 부분 철거합니다. \n 기존 구조 최대한 살려서 비용을 확 줄여드려요." },
   { side: "left" as const, text: "공사기간이 길어지면 임대료만 나가잖아요 ㅠㅠ" },
-  { side: "right" as const, text: "평균 21일 내 완공합니다. 영업 공백 최소화가 저희 원칙이에요." },
+  { side: "right" as const, text: "평균 7일 내 완공합니다. 영업 공백 최소화가 저희 원칙이에요." },
   { side: "left" as const, text: "부분 리모델링만으로 업종 전환이 진짜 가능한가요?" },
   { side: "right" as const, text: "가능합니다. 기존 동선과 설비를 활용한 맞춤 설계를 제안드려요." },
   { side: "left" as const, text: "추가 비용이 계속 발생할까봐 불안해요..." },

@@ -8,6 +8,8 @@ const services = [
   { icon: "🛠️", title: "전문공사", desc: "냉·난방, 누수·방수, 닥트, 전기 증설 등 전문 파트 공사" },
   { icon: "⚡", title: "긴급간편공사", desc: "작지만 꼭 필요한 소액 간편 공사, 빠른 방문·빠른 처리" },
   { icon: "🏬", title: "전면공사", desc: "브랜딩부터 공간 전환까지 전체 리뉴얼 패키지 진행" },
+  { icon: "🔨", title: "부분철거", desc: "필요한 부분만 선별 철거, 비용과 기간 최소화" },
+  { icon: "🏗️", title: "전면철거", desc: "전체 철거 후 새로 시공, 맞춤형 전체 리뉴얼" },
   { icon: "📌", title: "기타", desc: "현장 조건별 맞춤 제안. 방문 실측 후 최적안 안내" },
 ];
 
@@ -34,7 +36,7 @@ export default function ServiceSection() {
         >
           <p className="text-xs font-semibold tracking-widest uppercase mb-3 text-warm-gray">Category</p>
           <h2 className="text-3xl md:text-4xl font-bold mb-3 text-accent">공사 카테고리</h2>
-          <p className="text-fg-secondary">업종변경 / 부분공사 / 전문공사 / 긴급간편공사 / 전면공사 / 기타</p>
+          <p className="text-fg-secondary">업종변경 / 부분공사 / 전문공사 / 긴급간편공사 / 전면공사 / 부분철거 / 전면철거 / 기타</p>
         </motion.div>
         <motion.div
           className="max-w-[1080px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"

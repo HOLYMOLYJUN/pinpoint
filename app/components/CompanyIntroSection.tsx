@@ -7,7 +7,7 @@ const points = [
   "다 뜯지 마세요. 필요한 곳 딱.",
   "인테리어도 이제 필요한 곳만 골라 담는 소액공사 전문 기업",
   "전국 250여개 점포 운영 경험의 프랜차이즈 본사 출신 전문가 제안",
-  "표준단가프로그램 기반 거품 없는 견적",
+  "표준 견적 프로그램 기반 거품 없는 견적",
   "전국 어디서든 24시간 이내 방문",
 ];
 
@@ -63,6 +63,15 @@ export default function CompanyIntroSection() {
               <p className="text-fg">{point}</p>
             </motion.div>
             ))}
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, y: 18 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.35, ease: "easeOut" as const } },
+              }}
+              className="rounded-[16px] p-6 bg-main-light shadow-md border-l-4 border-accent"
+            >
+              <p className="text-fg font-medium">부분공사도 신속한 A/S 처리</p>
+            </motion.div>
           </motion.div>
         </motion.div>
       </div>

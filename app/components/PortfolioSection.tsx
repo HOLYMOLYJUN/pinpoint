@@ -1,20 +1,50 @@
 "use client";
 
-import { useState } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
-const beforeAfter = [
-  { before: "노후화된 분식점", after: "모던 브런치 카페", category: "카페 전환" },
-  { before: "오래된 옷가게", after: "감성 디저트 매장", category: "디저트 전환" },
-  { before: "PC방", after: "무인 스터디카페", category: "스터디카페 전환" },
+const workImages = [
+  "/images/works/KakaoTalk_20260227_131806292.jpg",
+  "/images/works/KakaoTalk_20260227_131806292_01.jpg",
+  "/images/works/KakaoTalk_20260227_131806292_02.jpg",
+  "/images/works/KakaoTalk_20260227_131806292_03.jpg",
+  "/images/works/KakaoTalk_20260227_131806292_04.jpg",
+  "/images/works/KakaoTalk_20260227_131806292_05.jpg",
+  "/images/works/KakaoTalk_20260227_131806292_06.jpg",
+  "/images/works/KakaoTalk_20260227_131806292_07.jpg",
+  "/images/works/KakaoTalk_20260227_131806292_08.jpg",
+  "/images/works/KakaoTalk_20260227_131806292_09.jpg",
+  "/images/works/KakaoTalk_20260227_131806292_10.jpg",
+  "/images/works/KakaoTalk_20260227_131806292_11.jpg",
+  "/images/works/KakaoTalk_20260227_131806292_12.jpg",
+  "/images/works/KakaoTalk_20260227_131806292_13.jpg",
+  "/images/works/KakaoTalk_20260227_131816626.jpg",
+  "/images/works/KakaoTalk_20260227_131816626_01.jpg",
+  "/images/works/KakaoTalk_20260227_131816626_02.jpg",
+  "/images/works/KakaoTalk_20260227_131816626_03.jpg",
+  "/images/works/KakaoTalk_20260227_131816626_04.jpg",
+  "/images/works/KakaoTalk_20260227_131816626_05.jpg",
+  "/images/works/KakaoTalk_20260227_131816626_06.jpg",
+  "/images/works/KakaoTalk_20260227_131816626_07.jpg",
+  "/images/works/KakaoTalk_20260227_131816626_08.jpg",
+  "/images/works/KakaoTalk_20260227_131816626_09.jpg",
+  "/images/works/KakaoTalk_20260227_131816626_10.jpg",
 ];
 
-export default function PortfolioSection() {
-  const [activeBA, setActiveBA] = useState(0);
+const container = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.06, delayChildren: 0.05 } },
+};
 
+const item = {
+  hidden: { opacity: 0, y: 24 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" as const } },
+};
+
+export default function PortfolioSection() {
   return (
     <section id="portfolio" className="py-20 md:py-32 px-5 bg-warm-white">
-      <div className="max-w-[1920px] mx-auto">
+      <div className="max-w-[1440px] mx-auto">
         <motion.div
           className="text-center mb-24"
           initial={{ opacity: 0, y: 24 }}
@@ -24,79 +54,33 @@ export default function PortfolioSection() {
         >
           <p className="text-xs font-semibold tracking-widest uppercase mb-3 text-warm-gray">Portfolio</p>
           <h2 className="text-3xl md:text-4xl font-bold mb-3 text-accent">시공 사례</h2>
-          <p className="text-fg-secondary">기존 구조를 살리면서도 확실한 변화</p>
+          <p className="text-fg-secondary">저희가 그동안 공사한 매장 사례입니다</p>
         </motion.div>
         <motion.div
-          className="flex flex-wrap justify-center gap-3 mb-12"
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4, delay: 0.1 }}
-        >
-          {beforeAfter.map((item, i) => (
-            <button
-              key={i}
-              onClick={() => setActiveBA(i)}
-              className={`px-6 py-3 rounded-[16px] text-sm font-medium transition ${
-                activeBA === i ? "bg-accent text-white shadow-md" : "bg-main-light text-fg-secondary hover:bg-main-dark"
-              }`}
-            >
-              {item.category}
-            </button>
-          ))}
-        </motion.div>
-        <motion.div
-          className="max-w-[900px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-6"
+          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-60px" }}
-          variants={{
-            hidden: {},
-            visible: { transition: { staggerChildren: 0.15, delayChildren: 0.1 } },
-          }}
+          variants={container}
         >
-          <motion.div
-            variants={{
-              hidden: { opacity: 0, x: -40 },
-              visible: { opacity: 1, x: 0, transition: { duration: 0.45, ease: "easeOut" as const } },
-            }}
-            className="rounded-[16px] overflow-hidden p-8 md:p-10 min-h-[320px] flex flex-col items-center justify-center text-center bg-main-dark shadow-md"
-          >
-            <span className="inline-block text-xs font-bold px-3 py-1.5 rounded-full mb-4 bg-red-100 text-red-600">
-              BEFORE
-            </span>
-            <p className="text-2xl font-bold mb-2 text-accent">{beforeAfter[activeBA].before}</p>
-            <p className="text-sm mb-6 text-fg-muted">실제 시공 전 모습</p>
-            <div className="w-full h-36 rounded-[16px] flex items-center justify-center text-sm bg-warm-gray/15 text-warm-gray">
-              시공 전 사진 영역
-            </div>
-          </motion.div>
-          <motion.div
-            variants={{
-              hidden: { opacity: 0, x: 40 },
-              visible: { opacity: 1, x: 0, transition: { duration: 0.45, ease: "easeOut" as const } },
-            }}
-            className="rounded-[16px] overflow-hidden p-8 md:p-10 min-h-[320px] flex flex-col items-center justify-center text-center bg-accent shadow-md"
-          >
-            <span className="inline-block text-xs font-bold px-3 py-1.5 rounded-full mb-4 bg-green-900/50 text-green-300">
-              AFTER
-            </span>
-            <p className="text-2xl font-bold text-white mb-2">{beforeAfter[activeBA].after}</p>
-            <p className="text-sm mb-6 text-white/50">시공 완료 후 모습</p>
-            <div className="w-full h-36 rounded-[16px] flex items-center justify-center text-sm bg-white/10 text-white/30">
-              시공 후 사진 영역
-            </div>
-          </motion.div>
+          {workImages.map((src, i) => (
+            <motion.div
+              key={src}
+              variants={item}
+              className="group relative aspect-square rounded-[16px] overflow-hidden shadow-md"
+            >
+              <div className="absolute inset-0 transition-transform duration-300 group-hover:scale-105">
+                <Image
+                  src={src}
+                  alt={`시공 사례 ${i + 1}`}
+                  fill
+                  sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                  className="object-cover"
+                />
+              </div>
+            </motion.div>
+          ))}
         </motion.div>
-        <motion.p
-          className="text-center text-xs mt-8 text-fg-muted"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.4 }}
-        >
-          * 실제 시공 사진으로 교체 예정
-        </motion.p>
       </div>
     </section>
   );

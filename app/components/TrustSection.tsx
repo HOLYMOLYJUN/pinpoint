@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const stats = [
   { value: "150+", label: "누적 시공 사례" },
-  { value: "평균 21일", label: "공사 기간" },
+  { value: "평균 7일", label: "공사 기간" },
   { value: "98%", label: "고객 만족도" },
   { value: "1년", label: "A/S 보장" },
 ];

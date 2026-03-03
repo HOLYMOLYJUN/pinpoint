@@ -18,7 +18,7 @@ export default function PartnerSection() {
           <p className="text-fg-secondary leading-relaxed mb-6">
             전국 시공 네트워크 확장을 위해 지역 파트너를 모집합니다.
             <br />
-            업종변경/부분공사 경험 보유 팀 우대, 협업 프로세스는 별도 안내드립니다.
+            인테리어 업종 유경험자 우대, 협업 프로세스는 별도 안내드립니다.
           </p>
           <a
             href="#contact"

@@ -4,7 +4,6 @@ import ServiceSection from "./components/ServiceSection";
 import CompanyIntroSection from "./components/CompanyIntroSection";
 import PainPointSection from "./components/PainPointSection";
 import PortfolioSection from "./components/PortfolioSection";
-import NoticeSection from "./components/NoticeSection";
 import PartnerSection from "./components/PartnerSection";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
@@ -18,7 +17,6 @@ export default function Home() {
       <ServiceSection />
       <PainPointSection />
       <PortfolioSection />
-      <NoticeSection />
       <PartnerSection />
       <ContactSection />
       <Footer />
