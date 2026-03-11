@@ -14,7 +14,7 @@ const points = [
 export default function CompanyIntroSection() {
   return (
     <section id="company" className="py-20 md:py-32 px-5 bg-warm-white">
-      <div className="max-w-[1080px] mx-auto">
+      <div className="max-w-[1280px] mx-auto">
         <motion.div
           className="text-center mb-14"
           initial={{ opacity: 0, y: 24 }}
@@ -40,9 +40,9 @@ export default function CompanyIntroSection() {
               hidden: { opacity: 0, x: -24 },
               visible: { opacity: 1, x: 0, transition: { duration: 0.45, ease: "easeOut" as const } },
             }}
-            className="relative w-full aspect-4/3 rounded-[16px] overflow-hidden shadow-md"
+            className="relative w-full min-h-[320px] md:min-h-[420px] aspect-4/3 rounded-[16px] overflow-hidden shadow-md"
           >
-            <Image src="/images/main3.png" alt="핀포인트 업체소개 이미지" fill className="object-cover object-center" />
+            <Image src="/images/Intro.png" alt="핀포인트 리뉴얼 업체소개 - 상담, 현장 시공, 차량" fill className="object-cover object-center" sizes="(max-width: 1024px) 100vw, 640px" priority />
           </motion.div>
           <motion.div
             variants={{

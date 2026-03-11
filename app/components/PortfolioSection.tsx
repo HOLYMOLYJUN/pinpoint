@@ -17,7 +17,6 @@ const workImages = [
   "/images/works/KakaoTalk_20260227_131806292_10.jpg",
   "/images/works/KakaoTalk_20260227_131806292_11.jpg",
   "/images/works/KakaoTalk_20260227_131806292_12.jpg",
-  "/images/works/KakaoTalk_20260227_131806292_13.jpg",
   "/images/works/KakaoTalk_20260227_131816626.jpg",
   "/images/works/KakaoTalk_20260227_131816626_01.jpg",
   "/images/works/KakaoTalk_20260227_131816626_02.jpg",

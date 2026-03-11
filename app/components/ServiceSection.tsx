@@ -39,7 +39,7 @@ export default function ServiceSection() {
           <p className="text-fg-secondary">업종변경 / 부분공사 / 전문공사 / 긴급간편공사 / 전면공사 / 부분철거 / 전면철거 / 기타</p>
         </motion.div>
         <motion.div
-          className="max-w-[1080px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-80px" }}
@@ -49,7 +49,7 @@ export default function ServiceSection() {
             <motion.div
               key={i}
               variants={item}
-              className="rounded-[16px] p-8 py-10 bg-warm-white shadow-md transition hover:shadow-lg hover:-translate-y-1"
+              className="rounded-[16px] p-8 py-10 bg-warm-white  transition hover:shadow-lg hover:-translate-y-1"
             >
               <span className="text-3xl block mb-5">{s.icon}</span>
               <h3 className="text-lg font-bold mb-2 text-accent">{s.title}</h3>
